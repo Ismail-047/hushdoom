@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Outfit Variable', sans-serif;
+}
+
+/* THEME ANIMATION */
+@keyframes themeAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.theme-animation {
+    animation: themeAnimation 0.3s ease-in-out;
+}
+
+/* THIN DARK SCROLLBAR  */
+.scrollbar-thin-dark {
+    scrollbar-width: thin;
+    scrollbar-color: #404040 #262626;
+}
+
+.scrollbar-thin-dark::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar-thin-dark::-webkit-scrollbar-track {
+    background: #262626;
+}
+
+.scrollbar-thin-dark::-webkit-scrollbar-thumb {
+    background: #404040;
+    border-radius: 3px;
+}
+
+.scrollbar-thin-dark::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+}

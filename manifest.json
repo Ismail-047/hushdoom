@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Hushdoom",
+    "version": "1.0.0",
+    "description": "Hide distracting social media feeds to help you stay focused and productive.",
+    "permissions": [
+        "storage"
+    ],
+    "options_page": "index.html",
+    "icons": {
+        "16": "public/icons/icon16.png",
+        "48": "public/icons/icon48.png",
+        "128": "public/icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.facebook.com/*",
+                "*://*.instagram.com/*",
+                "*://*.youtube.com/*",
+                "*://*.reddit.com/*",
+                "*://*.x.com/*",
+                "*://*.twitter.com/*",
+                "*://*.linkedin.com/*",
+                "*://*.github.com/*",
+                "*://*.threads.com/*",
+                "*://*.tiktok.com/*",
+                "*://*.snapchat.com/*",
+                "*://*.pinterest.com/*",
+                "*://*.tumblr.com/*",
+                "*://*.bsky.app/*"
+            ],
+            "js": [
+                "src/scripts/script.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}

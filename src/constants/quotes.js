@@ -1,0 +1,61 @@
+export const BUILT_IN_QUOTES = [
+  { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+  { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
+  { text: "Everything you've ever wanted is on the other side of fear.", author: "George Addair" },
+  { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+  { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { text: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+  { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+  { text: "It is during our darkest moments that we must focus to see the light.", author: "Aristotle" },
+  { text: "The only impossible journey is the one you never begin.", author: "Tony Robbins" },
+  { text: "In the end, we only regret the chances we didn't take.", author: "Lewis Carroll" },
+  { text: "Your time is limited, don't waste it living someone else's life.", author: "Steve Jobs" },
+  { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
+  { text: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" },
+  { text: "Whether you think you can or you think you can't, you're right.", author: "Henry Ford" },
+  { text: "The only person you are destined to become is the person you decide to be.", author: "Ralph Waldo Emerson" },
+  { text: "Go confidently in the direction of your dreams. Live the life you have imagined.", author: "Henry David Thoreau" },
+  { text: "When you have a dream, you've got to grab it and never let go.", author: "Carol Burnett" },
+  { text: "Nothing is impossible. The word itself says 'I'm possible!'", author: "Audrey Hepburn" },
+  { text: "There is nothing impossible to they who will try.", author: "Alexander the Great" },
+  { text: "The bad news is time flies. The good news is you're the pilot.", author: "Michael Altshuler" },
+  { text: "Life has got all those twists and turns. You've got to hold on tight and off you go.", author: "Nicole Kidman" },
+  { text: "Keep your face always toward the sunshine, and shadows will fall behind you.", author: "Walt Whitman" },
+  { text: "Be the change that you wish to see in the world.", author: "Mahatma Gandhi" },
+  { text: "You are never too old to set another goal or to dream a new dream.", author: "C.S. Lewis" },
+  { text: "Small steps every day lead to big results.", author: "Unknown" },
+  { text: "The only limit to our realization of tomorrow will be our doubts of today.", author: "Franklin D. Roosevelt" },
+  { text: "Do not wait; the time will never be 'just right'. Start where you stand.", author: "Napoleon Hill" },
+  { text: "What you get by achieving your goals is not as important as what you become.", author: "Zig Ziglar" },
+  { text: "You don't have to be great to start, but you have to start to be great.", author: "Zig Ziglar" },
+  { text: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" },
+  { text: "If you are not willing to risk the usual, you will have to settle for the ordinary.", author: "Jim Rohn" },
+  { text: "Take the first step in faith. You don't have to see the whole staircase.", author: "Martin Luther King Jr." },
+  { text: "Opportunities don't happen. You create them.", author: "Chris Grosser" },
+  { text: "Try not to become a person of success, but rather try to become a person of value.", author: "Albert Einstein" },
+  { text: "It is never too late to be what you might have been.", author: "George Eliot" },
+  { text: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+  { text: "Don't be afraid to give up the good to go for the great.", author: "John D. Rockefeller" },
+  { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
+  { text: "The only place where success comes before work is in the dictionary.", author: "Vidal Sassoon" },
+  { text: "You miss 100% of the shots you don't take.", author: "Wayne Gretzky" },
+  { text: "Whether you think you can or you think you can't, you're right.", author: "Henry Ford" },
+  { text: "I have not failed. I've just found 10,000 ways that won't work.", author: "Thomas Edison" },
+  { text: "A person who never made a mistake never tried anything new.", author: "Albert Einstein" },
+  { text: "The mind is everything. What you think you become.", author: "Buddha" },
+  { text: "The best revenge is massive success.", author: "Frank Sinatra" },
+  { text: "Life is 10% what happens to you and 90% how you react to it.", author: "Charles R. Swindoll" },
+  { text: "Believe in yourself. You are braver than you think.", author: "Unknown" },
+  { text: "Act as if what you do makes a difference. It does.", author: "William James" },
+  { text: "What lies behind us and what lies before us are tiny matters compared to what lies within us.", author: "Ralph Waldo Emerson" },
+];
+
+export function getRandomQuote(builtIn, custom = []) {
+
+  const list = [...(builtIn || []), ...(custom || [])].filter(Boolean);
+
+  if (list.length === 0) return null;
+
+  return list[Math.floor(Math.random() * list.length)];
+}
