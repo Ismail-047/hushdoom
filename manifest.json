@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Hushdoom",
-    "version": "1.0.0",
-    "description": "Hide distracting social media feeds to help you stay focused and productive.",
+    "name": "Hushdoom - Feeds Blocker",
+    "version": "1.0.1",
+    "description": "Silence social feeds and reclaim your focus. Hide distracting timelines on 13+ sites with custom quotes and snooze control.",
     "permissions": [
         "storage"
     ],
